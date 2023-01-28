@@ -10,9 +10,9 @@ const TeamCard = props => {
   console.log(name, teamImageUrl)
 
   return (
-    <Link to={`/team-matches/${id}`}>
-      <li>
-        <img src={teamImageUrl} alt={name} />
+    <Link to={`/team-matches/${id}`} className="teamCard">
+      <li className="team-card-container ">
+        <img className="team-card-logo" src={teamImageUrl} alt={name} />
         <p>{name}</p>
       </li>
     </Link>

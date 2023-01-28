@@ -29,9 +29,7 @@ class TeamMatches extends Component {
     // )
 
     const response = await fetch(`https://apis.ccbp.in/ipl/${id}`)
-    console.log('response')
-    console.log(response)
-    console.log('response')
+
     const data = await response.json()
     const updatedData = {
       teamBannerUrl: data.team_banner_url,
@@ -62,7 +60,7 @@ class TeamMatches extends Component {
       date: eachItem.date,
       venue: eachItem.venue,
       competingTeam: eachItem.competing_team,
-      competingTeamLogo: eachItem.competingTeamLogo,
+      competingTeamLogo: eachItem.competing_team_logo,
       firstInnings: eachItem.first_innings,
       secondInnings: eachItem.second_innings,
       matchStatus: eachItem.match_status,
@@ -77,7 +75,6 @@ class TeamMatches extends Component {
   }
 
   render() {
-    console.log('in page 2')
     const {
       teamBannerUrl,
       latestMatchDetails,
@@ -85,12 +82,16 @@ class TeamMatches extends Component {
       showLoader,
     } = this.state
 
+    const {match} = this.props
+    const {params} = match
+    const {id} = params
+
     const page = (
-      <div>
-        <img src={teamBannerUrl} alt="banner" />
-        <p>Latest Matches</p>
+      <div className={`${id} team-matches-bg`}>
+        <img className="match-page-banner" src={teamBannerUrl} alt="banner" />
+        <p className="latest-matches-heading">Latest Matches</p>
         <LatestMatch details={latestMatchDetails} />
-        <ul>
+        <ul className="match-cards-container">
           {recentMatches.map(eachItem => (
             <MatchCard key={eachItem.id} details={eachItem} />
           ))}

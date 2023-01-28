@@ -38,20 +38,21 @@ class Home extends Component {
     )
     console.log(teamCardList)
     const dashBoard = (
-      <ul>
-        <div>
+      <div className="home-bg">
+        <div className="home-logo-container">
           <img
+            className="home-logo-image"
             src="https://assets.ccbp.in/frontend/react-js/ipl-logo-img.png"
             alt="ipl logo"
           />
           <h1>IPL Dashboard</h1>
         </div>
-        <ul>
+        <ul className="team-list-container">
           {teamCardList.map(eachItem => (
             <TeamCard key={eachItem.id} details={eachItem} />
           ))}
         </ul>
-      </ul>
+      </div>
     )
     const finalPage = showLoader === '1' ? loader : dashBoard
     return finalPage

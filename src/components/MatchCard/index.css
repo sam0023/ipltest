@@ -1,1 +1,31 @@
 /* Write your CSS here */
+.match-card-container {
+  list-style-type: none;
+  background-color: #0f172a;
+  margin: 20px;
+  width: 200px;
+  padding: 22px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border-radius: 7px;
+  transform: scale(1);
+  transition: transform 0.3s ease-in-out;
+}
+.match-card-container:hover {
+  transform: scale(1.05);
+}
+.match-card-img {
+  height: 120px;
+}
+.h3 {
+  font-size: 22px;
+  font-weight: 100;
+}
+.loss {
+  color: #e31a1a;
+}
+.win {
+  color: #18ed66;
+}

@@ -16,11 +16,16 @@ const MatchCard = props => {
     matchStatus,
   } = details
 
-  const css = matchStatus === 'Won' ? 'green' : 'red'
+  const css = matchStatus === 'Won' ? 'win' : 'loss'
 
   return (
-    <li>
-      <img src={competingTeamLogo} alt={competingTeam} />
+    <li className="match-card-container">
+      <img
+        className="match-card-img"
+        src={competingTeamLogo}
+        alt={competingTeam}
+      />
+      <h3 className="h3">{competingTeam}</h3>
       <p>{result}</p>
       <p className={css}>{matchStatus}</p>
     </li>
