@@ -32,8 +32,18 @@ class Home extends Component {
     const {teamCardList, showLoader} = this.state
 
     const loader = (
-      <div>
-        <Loader type="Oval" color="#ffffff" height={50} width={50} />
+      <div className="home-spinner-bg">
+        <div className="home-logo-container">
+          <img
+            className="home-logo-image"
+            src="https://assets.ccbp.in/frontend/react-js/ipl-logo-img.png"
+            alt="ipl logo"
+          />
+          <h1>IPL Dashboard</h1>
+        </div>
+        <div className="spinner">
+          <Loader type="Oval" color="#ffffff" height={50} width={50} />
+        </div>
       </div>
     )
     console.log(teamCardList)
@@ -54,7 +64,7 @@ class Home extends Component {
         </ul>
       </div>
     )
-    const finalPage = showLoader === '1' ? loader : dashBoard
+    const finalPage = showLoader === true ? loader : dashBoard
     return finalPage
   }
 }

@@ -88,7 +88,11 @@ class TeamMatches extends Component {
 
     const page = (
       <div className={`${id} team-matches-bg`}>
-        <img className="match-page-banner" src={teamBannerUrl} alt="banner" />
+        <img
+          className="match-page-banner"
+          src={teamBannerUrl}
+          alt="team banner"
+        />
         <p className="latest-matches-heading">Latest Matches</p>
         <LatestMatch details={latestMatchDetails} />
         <ul className="match-cards-container">
@@ -99,7 +103,7 @@ class TeamMatches extends Component {
       </div>
     )
     const loader = (
-      <div>
+      <div className={`${id} team-matches-spinner`}>
         <Loader type="Oval" color="#ffffff" height={50} width={50} />
       </div>
     )

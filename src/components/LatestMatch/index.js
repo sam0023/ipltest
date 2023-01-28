@@ -36,13 +36,13 @@ const LatestMatch = props => {
         <hr />
       </div>
       <div className="latest-match-container-part2">
-        <p>First Innings</p>
+        <h2>First Innings</h2>
         <p>{firstInnings}</p>
-        <p>Second Innings</p>
+        <h2>Second Innings</h2>
         <p>{secondInnings}</p>
-        <p>Man Of The Match</p>
+        <h2>Man Of The Match</h2>
         <p>{manOfTheMatch}</p>
-        <p>Umpires</p>
+        <h2>Umpires</h2>
         <p>{umpires}</p>
       </div>
     </div>

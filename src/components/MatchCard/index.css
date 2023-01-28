@@ -29,3 +29,19 @@
 .win {
   color: #18ed66;
 }
+@media (max-width: 767px) {
+  .match-card-container {
+    list-style-type: none;
+    background-color: #0f172a;
+    margin: 7px;
+    width: 140px;
+    padding: 22px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 7px;
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
+  }
+}

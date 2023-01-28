@@ -20,7 +20,7 @@
   align-items: center;
 }
 .latest-match-container-img {
-  height: 150px;
+  height: 110px;
 }
 
 @media screen and (min-width: 768px) {
@@ -41,7 +41,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 60%;
+    width: 65%;
   }
   .latest-match-container-part2 {
     text-align: right;
